@@ -25,8 +25,8 @@ class Instructor extends Person{
             return `${student.name} receives a perfect score on ${subject}!`;
       }
       teach(student){
-            const plusOrMinus = Math.round(Math.random()) * 2 - 1;
-            return `${student.name}, your new grade is ${student.grades + plusOrMinus}`;
+           student.grades += Math.round(Math.random()) * 2 - 1;
+            return `${student.name}, your new grade is ${student.grades}`;
       }
 };
 
@@ -145,4 +145,12 @@ const dw = new ProjectManager({
 console.log(buster.teach(francine));
 console.log(buster.teach(francine));
 console.log(muffy.teach(binky));
+console.log(muffy.teach(binky));
+console.log(muffy.teach(binky));
+console.log(arthur.teach(binky));
+console.log(arthur.teach(binky));
+console.log(arthur.teach(binky));
+console.log(buster.teach(binky));
+console.log(buster.teach(binky));
+console.log(buster.teach(binky));
 console.log(sueellen.graduate());
