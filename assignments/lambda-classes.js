@@ -31,7 +31,8 @@ class Student extends Person {
             super(attributes);
             this.previousBackground = attributes.previousBackground,
             this.className = attributes.className,
-            this.favSubjects = attributes.favSubjects
+            this.favSubjects = attributes.favSubjects,
+            this.grade = attributes.grade
       }
       listsSubjects(){
             return this.favSubjects;
@@ -65,26 +66,27 @@ const arthur = new Instructor({
       location: 'Montreal',
       age: 37,
       gender: 'male',
-      favLanguage: 'JavaScript',
+      favLanguage: 'Java',
       specialty: 'Front-end',
       catchPhrase: `Hey`
-    });
+});
 
 const buster = new Instructor({
       name: 'Buster',
       location: 'Montreal',
       age: 36,
       gender: 'male',
-      favLanguage: 'CSS',
+      favLanguage: 'CSS/LESS',
       specialty: 'UI',
       catchPhrase: `We're just specks of dust floating in space.`
 });
 
-const sueellen = new Instructor({
+const sueellen = new Student({
       name: 'Sue Ellen',
       location: 'Pointe-Claire',
       age: 37,
       gender: 'female',
+      grade: 96,
       favLanguage: 'JavaScript',
       specialty: 'Front-end',
       catchPhrase: `Animals make better friends than people.`
@@ -95,8 +97,9 @@ const binky = new Student({
       location: 'Laval',
       age: 39,
       gender: 'male',
-      favLanguage: 'JavaScript',
-      specialty: 'Front-end',
+      grade: 66,
+      favLanguage: 'Java',
+      specialty: 'Video Games',
       catchPhrase: `My dad said he'd buy me a computer when it snows in July`
     });
     
@@ -105,8 +108,9 @@ const francine = new Student({
       location: 'Longueuil',
       age: 37,
       gender: 'female',
-      favLanguage: 'JavaScript',
-      specialty: 'Front-end',
+      grade: 79,
+      favLanguage: 'Ruby',
+      specialty: 'Meta Programming',
       catchPhrase: `Over half the people on Earth are girls`
 });
 
@@ -115,8 +119,8 @@ const muffy = new ProjectManager({
       location: 'Saint-Eustache',
       age: 36,
       gender: 'female',
-      favLanguage: 'JavaScript',
-      specialty: 'Front-end',
+      favLanguage: 'Ruby',
+      specialty: 'One-Upping',
       catchPhrase: `Look ar her, trying to hold her head up high, despite her terrible posture.`
     });
     
@@ -125,8 +129,8 @@ const dw = new ProjectManager({
       location: 'Montreal',
       age: 30,
       gender: 'female',
-      favLanguage: 'JavaScript',
-      specialty: 'Front-end',
+      favLanguage: 'Python',
+      specialty: 'Data-Analysis',
       catchPhrase: `I don't care about the president, I care about ponies.`
 });
 
