@@ -48,8 +48,11 @@ class Student extends Person {
             return `${this.name} has begun sprint challenge on ${subject}.`;
       }
       graduate(){
-            if(this.grade >= 70);
-            return `Congrats ${this.name}!!!`
+            if(this.grades >= 70){
+                  return `Congrats ${this.name}!!!`;
+            } else {
+                  return `Sorry, ${this.name}, back to school.`;
+            }
       }
 };
 
@@ -153,4 +156,8 @@ console.log(arthur.teach(binky));
 console.log(buster.teach(binky));
 console.log(buster.teach(binky));
 console.log(buster.teach(binky));
+console.log(dw.teach(binky));
+console.log(dw.teach(binky));
 console.log(sueellen.graduate());
+console.log(francine.graduate());
+console.log(binky.graduate());
