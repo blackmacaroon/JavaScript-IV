@@ -24,6 +24,10 @@ class Instructor extends Person{
       grade(student, subject){
             return `${student.name} receives a perfect score on ${subject}!`;
       }
+      teach(student){
+            const plusOrMinus = Math.round(Math.random()) * 2 - 1;
+            return `${student.name}, your new grade is ${student.grades + plusOrMinus}`;
+      }
 };
 
 class Student extends Person {
@@ -32,7 +36,7 @@ class Student extends Person {
             this.previousBackground = attributes.previousBackground,
             this.className = attributes.className,
             this.favSubjects = attributes.favSubjects,
-            this.grade = attributes.grade
+            this.grades = attributes.grades
       }
       listsSubjects(){
             return this.favSubjects;
@@ -86,7 +90,7 @@ const sueellen = new Student({
       location: 'Pointe-Claire',
       age: 37,
       gender: 'female',
-      grade: 96,
+      grades: 96,
       favLanguage: 'JavaScript',
       specialty: 'Front-end',
       catchPhrase: `Animals make better friends than people.`
@@ -97,7 +101,7 @@ const binky = new Student({
       location: 'Laval',
       age: 39,
       gender: 'male',
-      grade: 66,
+      grades: 66,
       favLanguage: 'Java',
       specialty: 'Video Games',
       catchPhrase: `My dad said he'd buy me a computer when it snows in July`
@@ -108,7 +112,7 @@ const francine = new Student({
       location: 'Longueuil',
       age: 37,
       gender: 'female',
-      grade: 79,
+      grades: 79,
       favLanguage: 'Ruby',
       specialty: 'Meta Programming',
       catchPhrase: `Over half the people on Earth are girls`
@@ -134,4 +138,6 @@ const dw = new ProjectManager({
       catchPhrase: `I don't care about the president, I care about ponies.`
 });
 
- 
+console.log(buster.teach(francine));
+console.log(buster.teach(francine));
+console.log(muffy.teach(binky));
