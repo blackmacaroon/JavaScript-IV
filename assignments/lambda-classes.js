@@ -47,6 +47,10 @@ class Student extends Person {
       sprintChallenge(subject){
             return `${this.name} has begun sprint challenge on ${subject}.`;
       }
+      graduate(){
+            if(this.grade >= 70);
+            return `Congrats ${this.name}!!!`
+      }
 };
 
 class ProjectManager extends Instructor {
@@ -141,3 +145,4 @@ const dw = new ProjectManager({
 console.log(buster.teach(francine));
 console.log(buster.teach(francine));
 console.log(muffy.teach(binky));
+console.log(sueellen.graduate());
